@@ -1,0 +1,17 @@
+aws-cfn-bootstrap==2.0
+click==8.1.3
+docutils==0.14
+Flask==2.2.2
+Flask-Cors==3.0.10
+importlib-metadata==5.1.0
+itsdangerous==2.1.2
+Jinja2==3.1.2
+lockfile==0.11.0
+MarkupSafe==2.1.1
+pystache==0.5.4
+python-daemon==2.2.3
+simplejson==3.2.0
+six==1.16.0
+typing-extensions==4.4.0
+Werkzeug==2.2.2
+zipp==3.11.0
