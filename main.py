@@ -62,7 +62,7 @@ def post():
     except:
         return {'message': 'An internal error ocurred.'}, 500
     return new_user.json(), 201
-@jwt_required()
+#@jwt_required()
 def get():
     dados = minha_requisicao.parse_args()
     user = UserModel.find_user_by_id(int(dados['user_id']))
@@ -79,7 +79,7 @@ def delete():
 @app.route('/login', methods=['POST'])
 def post():
         dados = minha_requisicao.parse_args()
-        user = UserModel.find_user_by_login(dados['login'])
+        user = UserModel.find_user_by_login(dados['email'])
 
         if user and user.password == dados['password']:
             token_acesso = create_access_token(identity=user.user_id)
@@ -87,7 +87,7 @@ def post():
         return {'message': 'User or password is not correct.'}, 401
 
 @app.route('/auth', methods=['POST'])
-@jwt_required()
+#@jwt_required()
 def auth_post():
         return {'auth': 'ok'}, 200
 
